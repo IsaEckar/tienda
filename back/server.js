@@ -1,16 +1,14 @@
-const app = require("./app")
-const connectDatabase = require("./config/database")
+const app=require("./app")
+const connectDatabase = require("./config/database");
 
-
-//SETERAR EL ARCHIVO DE CONFIGURACION
-const dotenv = require("dotenv")
+//Setear el archivo de configuración
+const dotenv=require("dotenv");
 dotenv.config({path:'back/config/config.env'})
 
-//configurar base de datos 
+//Configurar base de datos
 connectDatabase();
 
-
-//llamemos al servidor
+//Llamemos al server
 const server=app.listen(process.env.PORT, () => {
-    console.log(`servidor iniciado en el puerto: ${process.env.PORT} en modo: ${process.env.NODE_ENV}`)
+    console.log(`Servidor iniciado en el puerto: ${process.env.PORT} en modo: ${process.env.NODE_ENV}`)
 })
