@@ -106,4 +106,5 @@ export const ProductsList = () => {
         </Fragment>
     )
 }
+
 export default ProductsList
